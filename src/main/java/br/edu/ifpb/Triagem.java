@@ -7,39 +7,42 @@ public class Triagem {
                 doador.getPeso() >= 50 && doador.getSexo().equalsIgnoreCase("F")) {
             if (doador.getIdade() >= 16 && doador.getIdade() <= 69) {
                 if (doador.getIdade() >= 60 && !doador.isDoaSangue()) {
-                    m.reprovado();
+                    m.etapa1Reprovado();
                     m.doadorMaiorSessentaENDoador();
                     return false;
                 } else {
-                    m.aprovado();
+                    m.etapa1Aprovado();
                     return true;
                 }
             } else {
-                m.reprovado();
+                m.etapa1Reprovado();
                 m.idadeNPermitida();
                 return false;
             }
         } else {
-            m.reprovado();
+            m.etapa1Reprovado();
             m.pesoNPermitido();
             return false;
         }
     }
 
     public boolean etapa2 (Doador doador) {
-        if (doador.isTemFebre()) {
-            m.reprovado();
-            m.febre();
-            return false;
-        } else if (doador.isGravida()) {
-            m.reprovado();
-            m.gravida();
-            return false;
-        } else if (doador.isAmamenta() && doador.isPartoADozeMeses()) {
-            m.reprovado();
-            m.partoMenosDozeMeses();
-            return false;
-        } m.aguarde(doador);
+        if (etapa1(doador)){
+            if (doador.isTemFebre()) {
+                m.reprovado();
+                m.febre();
+                return false;
+            } else if (doador.isGravida()) {
+                m.reprovado();
+                m.gravida();
+                return false;
+            } else if (doador.isAmamenta() && !doador.isPartoAMaisDozeMeses()) {
+                m.reprovado();
+                m.partoMenosDozeMeses();
+                return false;
+            } m.aguarde(doador);
+            return true;
+        }
         return true;
     }
 }

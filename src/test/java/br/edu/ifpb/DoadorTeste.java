@@ -13,7 +13,7 @@ public class DoadorTeste {
         homem.setSexo("M");
         homem.setGravida(false);
         homem.setAmamenta(false);
-        homem.setPartoADozeMeses(false);
+        homem.setPartoAMaisDozeMeses(false);
         homem.setDoaSangue(true);
         homem.setTemFebre(false);
 
@@ -24,7 +24,7 @@ public class DoadorTeste {
         mulher.setSexo("F");
         mulher.setGravida(false);
         mulher.setAmamenta(false);
-        mulher.setPartoADozeMeses(false);
+        mulher.setPartoAMaisDozeMeses(false);
         mulher.setDoaSangue(true);
         mulher.setTemFebre(false);
 
@@ -34,7 +34,7 @@ public class DoadorTeste {
         Assert.assertEquals(homem.getSexo(), "M");
         Assert.assertFalse(homem.isGravida());
         Assert.assertFalse(homem.isAmamenta());
-        Assert.assertFalse(homem.isPartoADozeMeses());
+        Assert.assertFalse(homem.isPartoAMaisDozeMeses());
         Assert.assertTrue(homem.isDoaSangue());
         Assert.assertFalse(homem.isTemFebre());
 
@@ -44,7 +44,7 @@ public class DoadorTeste {
         Assert.assertEquals(mulher.getSexo(), "F");
         Assert.assertFalse(mulher.isGravida());
         Assert.assertFalse(mulher.isAmamenta());
-        Assert.assertFalse(mulher.isPartoADozeMeses());
+        Assert.assertFalse(mulher.isPartoAMaisDozeMeses());
         Assert.assertTrue(mulher.isDoaSangue());
         Assert.assertFalse(mulher.isTemFebre());
     }

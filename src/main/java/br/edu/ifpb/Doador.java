@@ -7,12 +7,12 @@ public class Doador {
     private String sexo;
     private boolean gravida;
     private boolean amamenta;
-    private boolean partoADozeMeses;
+    private boolean partoAMaisDozeMeses;
     private boolean doaSangue;
     private boolean temFebre;
 
     public Doador(String nome, int idade, long peso, String sexo,
-                  boolean gravida, boolean amamenta, boolean partoADozeMeses,
+                  boolean gravida, boolean amamenta, boolean partoAMaisDozeMeses,
                   boolean doaSangue, boolean temFebre) {
         this.nome = nome;
         this.idade = idade;
@@ -20,7 +20,7 @@ public class Doador {
         this.sexo = sexo;
         this.gravida = gravida;
         this.amamenta = amamenta;
-        this.partoADozeMeses = partoADozeMeses;
+        this.partoAMaisDozeMeses = partoAMaisDozeMeses;
         this.doaSangue = doaSangue;
         this.temFebre = temFebre;
     }
@@ -75,12 +75,12 @@ public class Doador {
         this.amamenta = amamenta;
     }
 
-    public boolean isPartoADozeMeses() {
-        return partoADozeMeses;
+    public boolean isPartoAMaisDozeMeses() {
+        return partoAMaisDozeMeses;
     }
 
-    public void setPartoADozeMeses(boolean partoADozeMeses) {
-        this.partoADozeMeses = partoADozeMeses;
+    public void setPartoAMaisDozeMeses(boolean partoAMaisDozeMeses) {
+        this.partoAMaisDozeMeses = partoAMaisDozeMeses;
     }
 
     public boolean isDoaSangue() {
@@ -108,7 +108,7 @@ public class Doador {
                 ", sexo='" + sexo + '\'' +
                 ", gravida=" + gravida +
                 ", amamenta=" + amamenta +
-                ", partoADozeMeses=" + partoADozeMeses +
+                ", partoADozeMeses=" + partoAMaisDozeMeses +
                 ", doaSangue=" + doaSangue +
                 ", temFebre=" + temFebre +
                 '}';
