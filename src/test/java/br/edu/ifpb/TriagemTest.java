@@ -89,4 +89,9 @@ public class TriagemTest {
         Assert.assertFalse(t.podeDoar(d23));
         Assert.assertFalse(t.podeDoar(d24));
     }
+
+    /*
+    * Levando em conta que a classe "Mensagem" é usada dentro de "Triagem", o codigo de teste de "Triagem" também testa a classe "Mensagem"
+    * */
+
 }
