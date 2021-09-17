@@ -1,8 +1,10 @@
 package br.edu.ifpb;
 
 public class Triagem {
+    
     Mensagem m = new Mensagem();
-    private boolean etapa1(Doador doador) {
+    
+    public boolean etapa1(Doador doador) {
         if ((doador.getPeso() >= 60 && doador.getSexo().equalsIgnoreCase("M")) ||
                 doador.getPeso() >= 50 && doador.getSexo().equalsIgnoreCase("F")) {
             if (doador.getIdade() >= 16 && doador.getIdade() <= 69) {
@@ -26,7 +28,7 @@ public class Triagem {
         }
     }
 
-    private boolean etapa2 (Doador doador) {
+    public boolean etapa2 (Doador doador) {
         if (doador.isTemFebre()) {
             m.reprovado();
             m.febre();
