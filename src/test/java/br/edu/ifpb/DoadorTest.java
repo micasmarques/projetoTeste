@@ -28,6 +28,7 @@ public class DoadorTeste {
         mulher.setDoaSangue(true);
         mulher.setTemFebre(false);
 
+
         Assert.assertEquals(homem.getNome(), "Micael");
         Assert.assertEquals(homem.getIdade(), 22);
         Assert.assertEquals(homem.getPeso(), 115);
