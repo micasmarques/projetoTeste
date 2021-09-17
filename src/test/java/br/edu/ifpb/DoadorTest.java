@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class DoadorTest {
+    private static final double DELTA = 1e-15;
     @Test
     public void testGetsAndSets(){
         Doador homem = new Doador();
@@ -31,7 +32,7 @@ public class DoadorTest {
 
         Assert.assertEquals(homem.getNome(), "Micael");
         Assert.assertEquals(homem.getIdade(), 22);
-        Assert.assertEquals(homem.getPeso(), 115);
+        Assert.assertEquals(homem.getPeso(), 115, DELTA);
         Assert.assertEquals(homem.getSexo(), "M");
         Assert.assertFalse(homem.isGravida());
         Assert.assertFalse(homem.isAmamenta());
@@ -41,7 +42,7 @@ public class DoadorTest {
 
         Assert.assertEquals(mulher.getNome(), "Beatriz");
         Assert.assertEquals(mulher.getIdade(), 21);
-        Assert.assertEquals(mulher.getPeso(), 55);
+        Assert.assertEquals(mulher.getPeso(), 55, DELTA);
         Assert.assertEquals(mulher.getSexo(), "F");
         Assert.assertFalse(mulher.isGravida());
         Assert.assertFalse(mulher.isAmamenta());
