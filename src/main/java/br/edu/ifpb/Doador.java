@@ -3,7 +3,7 @@ package br.edu.ifpb;
 public class Doador {
     private String nome;
     private int idade;
-    private long peso;
+    private double peso;
     private String sexo;
     private boolean gravida;
     private boolean amamenta;
@@ -43,7 +43,7 @@ public class Doador {
         this.idade = idade;
     }
 
-    public long getPeso() {
+    public double getPeso() {
         return peso;
     }
 
