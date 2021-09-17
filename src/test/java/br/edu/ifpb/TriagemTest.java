@@ -90,8 +90,23 @@ public class TriagemTest {
         Assert.assertFalse(t.podeDoar(d24));
     }
 
-    /*
-    * Levando em conta que a classe "Mensagem" é usada dentro de "Triagem", o codigo de teste de "Triagem" também testa a classe "Mensagem"
-    * */
+    @Test
+    public void testEtapa1(){
+        Assert.assertTrue(t.etapa1(d1));
+        Assert.assertFalse(t.etapa1(d7));
+        Assert.assertFalse(t.etapa1(d12));
+        Assert.assertTrue(t.etapa1(d24));
+    }
 
+    @Test
+    public void testEtapa2(){
+        Assert.assertTrue(t.etapa2(d8));
+        Assert.assertTrue(t.etapa2(d9));
+        Assert.assertFalse(t.etapa2(d15));
+        Assert.assertFalse(t.etapa2(d23));
+    }
+
+    /*
+     * Levando em conta que a classe "Mensagem" é usada dentro de "Triagem", o codigo de teste de "Triagem" também testa a classe "Mensagem"
+     * */
 }
