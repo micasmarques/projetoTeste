@@ -39,7 +39,7 @@ public class Triagem {
             m.reprovado();
             m.partoMenosDozeMeses();
             return false;
-        } aprovado(doador);
+        } m.aprovado(doador);
         return true;
     }
 
